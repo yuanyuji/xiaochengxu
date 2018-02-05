@@ -1,0 +1,65 @@
+<!--pages/view/view.wxml-->
+<view class='box'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="1000" duration="1000" circular="true" indicator-active-color="#000" indicator-color="#fff">    
+      <block wx:for="{{movies}}" wx:for-index="index" wx:key="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+    </swiper>
+    <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">按高校地区</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">按高校类型</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">按高校性质</view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">专业分类</view>
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:280px;" bindchange="bindChange">
+        <swiper-item>
+          <view>
+            <view class='table'>
+              <view class="section-top">
+                <block  wx:for="{{address}}" wx:for-item="addr" wx:key="index">
+                  <input type="text" placeholder="{{addr}}" class="input-top " disabled />
+                </block>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside2</view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside3</view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside4</view>
+        </swiper-item>
+    </swiper>
+    <view class='h'></view>
+    <view class="swiper-tab1">
+        <view class="swiper-tab-list {{currentTab1==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav1">大学排名</view>
+        <view class="swiper-tab-list {{currentTab1==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav1">专业排名</view>
+        <view class="swiper-tab-list {{currentTab1==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav1">文科排名</view>
+        <view class="swiper-tab-list {{currentTab1==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav1">理科排名</view>
+    </view>
+    <swiper current="{{currentTab1}}" class="swiper-box" duration="300" style="height:300px;" bindchange="bindChange1">
+        <swiper-item>
+          <view class='lis'>
+            <ul class="section-lis">
+              <block  wx:for="{{list}}" wx:for-item="li" wx:key="index">
+                  <li><span></span>{{li}}</li>
+              </block> 
+            </ul>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside2</view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside3</view>
+        </swiper-item>
+        <swiper-item>
+          <view>Seside4</view>
+        </swiper-item>
+    </swiper>
+</view>

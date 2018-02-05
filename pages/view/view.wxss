@@ -1,0 +1,106 @@
+.h{
+  background: #ececee;
+  height: 10px;
+}
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.swiper .wx-swiper-dot{  
+    width:40rpx;
+    display: inline-flex;
+    height: 10rpx;
+    margin-left: 20rpx;
+    justify-content:space-between; 
+}
+.swiper .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1;  
+    border-radius: 10rpx;
+    border: 1px solid #fff
+}
+.swiper .wx-swiper-dot-active::before{
+    border: 1px solid #fff    
+}
+
+.swiper-tab,.swiper-tab1{
+  width: 100%; 
+  display: flex;
+  justify-content: space-around;
+  line-height: 100rpx;
+  margin-top: 10px;
+  background: #ebecee
+}
+.swiper-tab1{
+  line-height: 80rpx;
+  background: #fff;
+  margin-top: 0;
+  border-bottom: 1px solid #ebebeb
+}
+.swiper-tab1 .on{
+  color: #387bee; 
+  border-bottom: 2px solid #387bee
+}
+.swiper-tab-list{
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 20%; 
+  color: #777777; 
+  flex: 1;
+  text-align: center;
+}
+.swiper-tab .on{
+  color: #333; 
+  font-weight: bold
+}
+.swiper-box{ 
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ }
+.swiper-box view{ 
+  text-align: center; 
+}
+.section-top{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+.section-top input{
+  flex-basis: 24.5%;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px #e4e4e4 solid;
+  border-right: 1px #e4e4e4 solid;
+  height: 30px;
+}
+.section-top input:nth-child(4n){
+  border-right: none
+}
+
+.lis ul{
+  display: block
+}
+.lis ul li{
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+  color: #777;
+  padding-left: 10px;
+}
+.lis ul li span{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid #fe6115;
+  border-right: 3px solid transparent;
+}
